@@ -1,0 +1,40 @@
+{
+  "name": "sly",
+  "description": "sly is a Zerious module",
+  "keywords": [
+    "sly"
+  ],
+  "version": "0.0.0",
+  "main": "sly.js",
+  "homepage": "http://github.com/zerious/sly",
+  "repository": "http://github.com/zerious/sly.git",
+  "bugs": {
+    "url": "http://github.com/zerious/sly/issues"
+  },
+  "author": {
+    "name": "Sam Eubank",
+    "email": "sameubank@gmail.com"
+  },
+  "contributors": {
+    "name": "Sam Eubank",
+    "email": "sameubank@gmail.com"
+  },
+  "license": "MIT",
+  "engines": [
+    "node >= 0.2.6"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "retest": "mocha --watch",
+    "cover": "istanbul cover _mocha",
+    "report": "open coverage/lcov-report/index.html",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "zeriousify": "~0.0.4",
+    "mocha": "~1.17.1",
+    "istanbul": "~0.2.6",
+    "assert-plus": "~0.1.5"
+  }
+}
