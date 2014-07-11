@@ -14,12 +14,13 @@ var isMaster = getCookie('m');
 var isFollowing = !isMaster;
 var hash = getHash();
 var defaultHash = '0,0';
-var talk = location.href.replace(/(^.*?\/\/[^\/]+|#.*$)/g, '');
+var talkId = location.href.replace(/(^.*?\/\/[^\/]+|#.*$)/g, '');
 var beams = Beams();
 
 // Set the client to master mode so others will follow.
 if (hash == 'm') {
   isMaster = 1;
+  isFollowing = 0;
   setCookie('m', 1);
   setHash(defaultHash);
 }
@@ -50,9 +51,11 @@ bind(window, 'keydown', function (element, event) {
   var key = event.keyCode;
   if (key == LEFT_KEY) {
     incrementFrame(-1);
+    isFollowing = 0;
   }
   else if (key == RIGHT_KEY) {
     incrementFrame(1);
+    isFollowing = 0;
   }
 });
 
@@ -90,7 +93,6 @@ function incrementFrame(increment) {
 }
 
 function moveToSlide(newIndex) {
-  log('moveToSlide:' + newIndex);
   if (newIndex != slideIndex) {
     slideIndex = newIndex;
     all('u', function (slide, index) {
@@ -126,7 +128,6 @@ function show(element) {
  * Hide slides that have a
  */
 function moveToFrame(newIndex) {
-  log('moveToFrame:' + newIndex);
   lastFrame = 0;
   var found;
   frameIndex = newIndex;
@@ -162,6 +163,7 @@ function setState() {
   setHash(slideIndex + ',' + frameIndex);
   if (isMaster) {
     beams._EMIT('sly:state', {
+      id: talkId,
       slide: slideIndex,
       frame: frameIndex
     });
@@ -170,12 +172,12 @@ function setState() {
 
 beams._CONNECT(function () {
   if (!isMaster) {
-    beams._EMIT('sly:subscribe', talk);
+    beams._EMIT('sly:subscribe', talkId);
   }
 });
 
 beams._ON('sly:state', function (state) {
-  if ((state.talk == talk) && isFollowing) {
+  if ((state.id == talkId) && isFollowing) {
     moveToSlide(state.slide);
     moveToFrame(state.frame);
   }

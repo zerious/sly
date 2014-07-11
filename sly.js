@@ -1,4 +1,4 @@
-var beams = require('beams');
+var beams = app.beams;
 var talks = {};
 
 function getTalk(id) {
@@ -16,13 +16,15 @@ var sly = module.exports = function () {
 
   beams.on('sly:subscribe', function (talkId, client) {
     var talk = getTalk(talkId);
-    talk.subscribers.push(client);
+    if (client) {
+      talk.subscribers.push(client);
+    }
   });
 
   beams.on('sly:state', function (state) {
-    var talk = getTalk(state.talk);
-    talk.subscribers.each(function (subscriber) {
-      subscriber.emit(state);
+    var talk = getTalk(state.id);
+    talk.subscribers.forEach(function (subscriber) {
+      subscriber.emit('sly:state', state);
     });
   });
 
