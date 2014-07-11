@@ -7,7 +7,10 @@
   "version": "0.0.0",
   "main": "sly.js",
   "homepage": "http://github.com/zerious/sly",
-  "repository": "http://github.com/zerious/sly.git",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/zerious/sly.git"
+  },
   "bugs": {
     "url": "http://github.com/zerious/sly/issues"
   },
@@ -36,5 +39,9 @@
     "mocha": "~1.17.1",
     "istanbul": "~0.2.6",
     "assert-plus": "~0.1.5"
-  }
+  },
+  "readme": "# Sly\n\n[![NPM Version](https://badge.fury.io/js/sly.png)](http://badge.fury.io/js/sly)\n[![Build Status](https://travis-ci.org/zerious/sly.png?branch=master)](https://travis-ci.org/zerious/sly)\n[![Code Coverage](https://coveralls.io/repos/zerious/sly/badge.png?branch=master)](https://coveralls.io/r/zerious/sly)\n[![Dependencies](https://david-dm.org/zerious/sly.png?theme=shields.io)](https://david-dm.org/zerious/sly)\n[![Support](http://img.shields.io/gittip/zerious.png)](https://www.gittip.com/zerious/)\n\nSly is a whizzy presentation library.\n",
+  "readmeFilename": "README.md",
+  "_id": "sly@0.0.0",
+  "_from": "sly@"
 }
