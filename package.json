@@ -4,7 +4,7 @@
   "keywords": [
     "sly"
   ],
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "sly.js",
   "homepage": "http://github.com/zerious/sly",
   "repository": {
@@ -22,7 +22,6 @@
     "name": "Sam Eubank",
     "email": "sameubank@gmail.com"
   },
-  "license": "MIT",
   "engines": [
     "node >= 0.2.6"
   ],
@@ -35,13 +34,17 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "zeriousify": "~0.0.4",
-    "mocha": "~1.17.1",
-    "istanbul": "~0.2.6",
-    "assert-plus": "~0.1.5"
+    "zeriousify": "0.1.7",
+    "mocha": "1.20.1",
+    "istanbul": "0.3.0",
+    "assert-plus": "0.1.5",
+    "coveralls": "2.10.0"
   },
-  "readme": "# Sly\n\n[![NPM Version](https://badge.fury.io/js/sly.png)](http://badge.fury.io/js/sly)\n[![Build Status](https://travis-ci.org/zerious/sly.png?branch=master)](https://travis-ci.org/zerious/sly)\n[![Code Coverage](https://coveralls.io/repos/zerious/sly/badge.png?branch=master)](https://coveralls.io/r/zerious/sly)\n[![Dependencies](https://david-dm.org/zerious/sly.png?theme=shields.io)](https://david-dm.org/zerious/sly)\n[![Support](http://img.shields.io/gittip/zerious.png)](https://www.gittip.com/zerious/)\n\nSly is a whizzy presentation library.\n",
   "readmeFilename": "README.md",
-  "_id": "sly@0.0.0",
-  "_from": "sly@"
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/zerious/sly/blob/master/MIT-LICENSE.md"
+    }
+  ]
 }
