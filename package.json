@@ -1,49 +1,33 @@
 {
   "name": "sly",
+  "version": "0.0.1",
   "description": "sly is a Zerious module",
+  "dependencies": {},
+  "devDependencies": {
+    "zeriousify": "^0.1.10",
+    "exam": "^0.0.8",
+    "istanbul": "0.3.0",
+    "coveralls": "2.10.0"
+  },
   "keywords": [
     "sly"
   ],
-  "version": "0.0.1",
   "main": "sly.js",
-  "homepage": "http://github.com/lighterio/sly",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/lighterio/sly.git"
+  "engines": {
+    "node": ">=0.2.6"
   },
-  "bugs": {
-    "url": "http://github.com/lighterio/sly/issues"
-  },
-  "author": {
-    "name": "Sam Eubank",
-    "email": "sameubank@gmail.com"
-  },
-  "contributors": {
-    "name": "Sam Eubank",
-    "email": "sameubank@gmail.com"
-  },
-  "engines": [
-    "node >= 0.2.6"
-  ],
   "scripts": {
     "test": "./node_modules/exam/exam.js",
-    "retest": "./node_modules/exam/exam.js --watch",
     "cover": "istanbul cover ./node_modules/exam/exam.js",
     "report": "open coverage/lcov-report/index.html",
     "coveralls": "istanbul cover ./node_modules/exam/exam.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "zeriousify": "0.1.9",
-    "exam": "0.0.5",
-    "istanbul": "0.3.0",
-    "coveralls": "2.10.0"
-  },
-  "readmeFilename": "README.md",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/lighterio/sly/blob/master/MIT-LICENSE.md"
-    }
-  ]
+  "repository": "https://github.com/lighterio/sly.git",
+  "bugs": "https://github.com/lighterio/sly/issues",
+  "homepage": "http://github.com/lighterio/sly",
+  "author": "Sam Eubank <sameubank@gmail.com>",
+  "contributors": [
+    "Sam Eubank <sameubank@gmail.com>"
+  ],
+  "license": "MIT"
 }

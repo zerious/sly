@@ -43,8 +43,8 @@ all('b', function (content, index) {
 
 // Move to the slide and frame indicated in the URL's hash.
 var pair = hash.split(',');
-frameIndex = pair[1] * 1;
 moveToSlide(pair[0] * 1);
+moveToFrame(pair[1] * 1);
 
 // When a user presses a key, maybe move to a new slide.
 bind(window, 'keydown', function (element, event) {
@@ -124,9 +124,6 @@ function show(element) {
   addClass(element, '_APPEAR');
 }
 
-/**
- * Hide slides that have a
- */
 function moveToFrame(newIndex) {
   lastFrame = 0;
   var found;
@@ -177,11 +174,53 @@ beams._CONNECT(function () {
 });
 
 beams._ON('sly:state', function (state) {
+  log('talk', talkId);
+  log('state', state);
+  log('isFollowing', isFollowing);
   if ((state.id == talkId) && isFollowing) {
     moveToSlide(state.slide);
     moveToFrame(state.frame);
   }
 });
+
+beams._ON('sly:poll', function (data) {
+  log(data);
+});
+
+on('#_JOIN', 'click', function (element, event) {
+  var email = getValue('_EMAIL');
+  setCookie('email', email);
+  beams._EMIT('sly:join', email);
+});
+
+
+on(document, 'input._CHOICE', 'click', function (element, event) {
+  beams._EMIT('sly:vote', {
+    talk: talkId,
+    poll: element.name,
+    choice: getValue(element)
+  });
+});
+
+onReady(function (readyElement) {
+  all(readyElement, 'b._POLL', function (poll) {
+    all(poll, 'input', function (input, index) {
+      addClass(input, '_CHOICE');
+      setAttribute(input, 'value', index);
+      setAttribute(input, 'name', poll.id);
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
