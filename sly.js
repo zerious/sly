@@ -15,7 +15,7 @@ function getTalk(id) {
 
 var sly = module.exports = function () {
 
-  var beams = app.beams;
+  var beams = App.beams;
 
   beams.on('sly:subscribe', function (talkId, client) {
     var talk = getTalk(talkId);
@@ -64,6 +64,6 @@ var sly = module.exports = function () {
  */
 Object.defineProperty(sly, 'version', {
   get: function () {
-    return require('./package.json').version;
+    return require(__dirname + '/package.json').version;
   }
 });

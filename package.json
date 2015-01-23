@@ -4,8 +4,7 @@
   "description": "sly is a Zerious module",
   "dependencies": {},
   "devDependencies": {
-    "zeriousify": "^0.1.10",
-    "exam": "^0.0.8",
+    "exam": "^0.2.1",
     "istanbul": "0.3.0",
     "coveralls": "2.10.0"
   },
