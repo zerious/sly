@@ -1,6 +1,6 @@
 {
   "name": "sly",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "sly is a Zerious module",
   "dependencies": {},
   "devDependencies": {

@@ -1,0 +1,17 @@
+js
+  state._html = state._html.replace(/(^|\n)[ ]{8}/g, '$1');
+
+pre>code ${_html}
+
++css
+
+  s-content pre,
+  s-content code {
+    border: 0;
+    margin: 0;
+  }
+
+  s-content pre {
+    font-size: 0.7em!important;
+    margin: 1em 0;
+  }

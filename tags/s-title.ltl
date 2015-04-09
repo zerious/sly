@@ -1,0 +1,19 @@
+h3 ={_html}
+
++css
+
+  s-title {
+    position: absolute;
+    display: block;
+    height: 20%;
+    width: 100%;
+    background: #26a;
+  }
+
+  s-title h3 {
+    position: absolute;
+    display: block;
+    border: 0;
+    margin: -0.75em 1em!important;
+    top: 50%;
+  }

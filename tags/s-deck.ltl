@@ -1,0 +1,98 @@
+style:
+  html,
+  body {
+    position: relative;
+    margin: 0!important;
+    border: 0!important;
+    padding: 0!important;
+    background: #012;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+: ={_html}
+
++css
+  s-deck {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  s-deck h1,
+  s-deck h2,
+  s-deck h3,
+  s-deck h4,
+  s-section {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    text-shadow: #14a 0 0.0625em;
+    font-weight: normal!important;
+    white-space: nowrap;
+  }
+
+  s-deck h1 {
+    font-weight: bold!important;
+    font-size: 1.75em;
+  }
+
+  s-deck h2 {
+    font-size: 1.75em;
+  }
+
+  s-deck h3 {
+    font-size: 1.5em;
+  }
+
+  s-deck h4,
+  s-deck li,
+  s-deck t-field {
+    font-size: 1.25em;
+  }
+
+  ._slyCenter {
+    display: block;
+    text-align: center;
+  }
+
+  big {
+    font-size: 2em;
+  }
+
+  s-deck a {
+    color: #cdf;
+    display: block;
+    line-height: 1.25em;
+  }
+
+  s-deck li {
+    padding: 0.125em;
+  }
+
+  s-deck a svg {
+    vertical-align: top;
+    width: 1.25em;
+    height: 1.25em;
+  }
+
+  s-deck tt {
+    border: 0;
+    padding: 0;
+    background: transparent!important;
+  }
+
+  s-title tt,
+  s-section tt {
+    color: #fff;
+  }
+
+
+js
+  setTimeout(function () {
+    window.Sly();
+  }, 9);

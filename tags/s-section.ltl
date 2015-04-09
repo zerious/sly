@@ -1,0 +1,18 @@
+: ={_html}
+
++css
+  s-section {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 2em 3em;
+    background: #26a;
+    color: #fff;
+  }
+
+  s-middle {
+    position: absolute;
+    display: inline-block;
+    top: 40%;
+    vertical-align: middle;
+  }

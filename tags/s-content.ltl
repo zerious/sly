@@ -1,0 +1,37 @@
+: ={_html}
+
++css
+  s-content {
+    position: absolute;
+    top: 20%;
+    height: 80%;
+    width: 100%;
+    padding: 1em 2em;
+    background: #eee;
+    color: #000;
+    overflow: auto;
+  }
+
+  s-content label._tatChoice {
+    color: #000;
+  }
+
+  s-deck s-content a {
+    color: #26a;
+  }
+
+  s-deck s-content h2,
+  s-deck s-content h3,
+  s-deck s-content h4 {
+    color: #abd;
+    font-weight: bold!important;
+    text-shadow: none;
+  }
+
+  ._slySmaller {
+    font-size: 0.80em;
+  }
+
+  s-content ul {
+    margin: 0 0 1.5em 0;
+  }

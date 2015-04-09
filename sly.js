@@ -13,9 +13,9 @@ function getTalk(id) {
   return talk;
 }
 
-var sly = module.exports = function () {
+var sly = module.exports = function (app) {
 
-  var beams = App.beams;
+  var beams = app.beams;
 
   beams.on('sly:subscribe', function (talkId, client) {
     var talk = getTalk(talkId);
