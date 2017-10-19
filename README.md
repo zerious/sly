@@ -1,6 +1,7 @@
 # <a href="http://lighter.io/sly" style="font-size:40px;text-decoration:none;color:#000"><img src="https://cdn.rawgit.com/lighterio/lighter.io/master/public/sly.svg" style="width:90px;height:90px"> Sly</a>
 [![NPM Version](https://img.shields.io/npm/v/sly.svg)](https://npmjs.org/package/sly)
 [![Downloads](https://img.shields.io/npm/dm/sly.svg)](https://npmjs.org/package/sly)
+[![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/sly/badge?style=rounded)](https://www.jsdelivr.com/package/npm/sly)
 [![Build Status](https://img.shields.io/travis/lighterio/sly.svg)](https://travis-ci.org/lighterio/sly)
 [![Code Coverage](https://img.shields.io/coveralls/lighterio/sly/master.svg)](https://coveralls.io/r/lighterio/sly)
 [![Dependencies](https://img.shields.io/david/lighterio/sly.svg)](https://david-dm.org/lighterio/sly)
